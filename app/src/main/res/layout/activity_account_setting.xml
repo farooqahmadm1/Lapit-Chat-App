@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".AccountSetting">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/profile"
+        app:civ_border_color="#FFffff"
+        app:civ_border_width="2dp" />
+
+
+    <TextView
+        android:id="@+id/account_display_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/display_name"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/account_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/account_display_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="@string/hi"
+        android:textColor="@android:color/white"/>
+
+    <Button
+        android:id="@+id/change_image_btn"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/change_status_btn"
+        android:backgroundTint="@android:color/white"
+        android:layout_centerHorizontal="true"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:onClick="changeImage"
+        android:text="@string/change_image"
+        android:textColor="@color/colorPrimaryDark"/>
+    <Button
+        android:id="@+id/change_status_btn"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:onClick="changeStatus"
+        android:backgroundTint="@color/colorAccent"
+        android:layout_marginBottom="69dp"
+        android:layout_marginTop="2dp"
+        android:text="@string/change_status"
+        android:textColor="@android:color/white"/>
+</RelativeLayout>
